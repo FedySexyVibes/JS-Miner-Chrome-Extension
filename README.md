@@ -1,5 +1,5 @@
 # JS Analyzer Chrome Extension
-
+![Cuccibu B.V](./image.png)
 JS Analyzer is a Chrome extension designed to analyze JavaScript files on any webpage you visit. It provides detailed information about API endpoints, tokens, cookies, headers, and file paths found within the JavaScript files. This tool was inspired by the paid extension [js-miner](https://github.com/PortSwigger/js-miner/) made for Burp Suite Pro.
 
 ## Features
