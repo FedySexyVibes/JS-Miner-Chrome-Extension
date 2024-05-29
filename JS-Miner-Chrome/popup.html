@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS Analyzer</title>
+  <style>
+    body {
+      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+      height: auto;
+      width: 580vw; /* Increase the width */
+      max-width: 700px; /* Set a max width for better readability */
+      font-family: Arial, sans-serif;
+      padding: 10px;
+      margin: 0;
+      overflow-y: auto;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: white;
+    }
+
+    .result {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 5px;
+      width: 100%;
+      overflow-wrap: break-word;
+    }
+
+    .script-url {
+      font-weight: bold;
+      cursor: pointer;
+      color: white;
+      white-space: normal;
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }
+
+    .detail {
+      margin-left: 10px;
+      margin-top: 10px;
+      background-color: #151823;
+      color: #252b37;
+      padding: 10px;
+      border-radius: 5px;
+      text-align: left;
+      font-size: 0.9em;
+      animation: textColor 10s ease infinite;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      margin-bottom: 5px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .glow:after {
+      position: absolute;
+      content: "";
+      top: -5px;
+      left: -5px;
+      right: -5px;
+      bottom: -5px;
+      z-index: -1;
+      margin: auto;
+      transform: scale(0.75);
+      filter: blur(5vw);
+      background: linear-gradient(270deg, #0fffc1, #7e0fff);
+      background-size: 200% 200%;
+      animation: animateGlow 10s ease infinite;
+    }
+
+    @keyframes animateGlow {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    @keyframes textColor {
+      0% {
+        color: #7e0fff;
+      }
+      50% {
+        color: #0fffc1;
+      }
+      100% {
+        color: #7e0fff;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="d-flex flex-column justify-content-center w-100 h-100">
+    <div class="d-flex flex-column justify-content-center align-items-center">
+      <h1 class="fw-light text-white m-0">JS Analyzer - Cuccibu B.V</h1>
+      <h3><center>Author: Fady Oueslati</center></h3>
+      <div id="results">Loading...</div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
